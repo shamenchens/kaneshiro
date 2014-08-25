@@ -14,7 +14,7 @@
 
 ## 使用範例
 
-[請點擊這裡](http://goooooooogle.github.io/kaneshiro/)
+[請點擊這裡](http://goooooooogle.github.io/kaneshiro/#example)
 
 
 ## 更新紀錄
