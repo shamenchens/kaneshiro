@@ -157,10 +157,10 @@
       switch(setting.links) {
         case 'www.npochannel.net':
           link_url = 'http://www.npochannel.net/donate_list.php?page=1&ReachType=1&ShowType=2&ProjNum=9999';
-          $.ajax('http://query.yahooapis.com/v1/public/yql', {
+          $.ajax('//query.yahooapis.com/v1/public/yql', {
             type: 'get',
             data: {
-              q: "use 'http://www.datatables.org/data/htmlstring.xml' as htmlstring; select * from htmlstring where url='"+link_url+"'",
+              q: "use '//www.datatables.org/data/htmlstring.xml' as htmlstring; select * from htmlstring where url='"+link_url+"'",
               format: 'json'
             },
             dataType: 'json',
