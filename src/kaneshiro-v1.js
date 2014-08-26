@@ -157,10 +157,10 @@
       switch(setting.links) {
         case 'www.npochannel.net':
           link_url = 'http://www.npochannel.net/donate_list.php?page=1&ReachType=1&ShowType=2&ProjNum=9999';
-          $.ajax('//query.yahooapis.com/v1/public/yql', {
+          $.ajax('http://query.yahooapis.com/v1/public/yql', {
             type: 'get',
             data: {
-              q: "use '//www.datatables.org/data/htmlstring.xml' as htmlstring; select * from htmlstring where url='"+link_url+"'",
+              q: "use 'http://www.datatables.org/data/htmlstring.xml' as htmlstring; select * from htmlstring where url='"+link_url+"'",
               format: 'json'
             },
             dataType: 'json',
@@ -171,8 +171,11 @@
               link = link_titles[Math.floor(Math.random()*(link_titles.length))];
 
               link = link.replace('<div class="left_content_start03_title">','').replace('</div>','').replace('donate_detail','http://www.npochannel.net/donate_detail').replace('">','" target="_blank" id="talk_popup_readmore" style="color:'+setting.readmore_color+'">');
-              says = '<p id="role_say_hi" style="color:'+setting.popup_color+'">'+setting.default_text+'</p>'+talk+link+'</p>';
+              says = '<p id="role_say_hi" style="color:'+setting.popup_color+';">'+setting.default_text+'</p><p id="role_say_content" style="display:none;">'+talk+link+'</p>';
               $('#role_says').scrollTop(0).html(says);
+              setTimeout(function() {
+                $('#role_say_content').fadeIn();
+              }, 1);
             }
           });
           break;
