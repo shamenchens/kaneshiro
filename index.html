@@ -8,7 +8,7 @@
   <meta content="這是一個讓您可以簡單、輕鬆地在 個人網站 或 網誌 中埋入「金城武彩蛋」Plugin，並讓更多人了解金城武的慈善理念" property="og:description">
   <meta content="website" property="og:type">
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="src/kaneshiro-v1.css">
   <style>
     .header {
@@ -115,12 +115,14 @@
     <p>步驟 1 : 請先在您的網頁中，引用 <code>jquery</code>，如果已經有了，可省略此步驟</p>
     <pre>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;</pre>
     <br>
-    <p>步驟 2 : 請在您的網頁中 <code>&lt;head&gt; ... &lt;/head&gt;</code> 內，引用下方 CSS</p>
-    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;http://goooooooogle.github.io/kaneshiro/src/kaneshiro-v1.css&quot;&gt;</pre>
-    <br>
-    <p>步驟 3 : 請在您的網頁中，緊鄰 <code>&lt;/body&gt;</code> 結束標記之前，引用下方 JS</p>
-    <pre>&lt;script src=&quot;http://goooooooogle.github.io/kaneshiro/src/kaneshiro-v1-min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;$.kaneshiro();&lt;/script&gt;</pre>
+    <p>步驟 2 : 請在您的網頁中 <code>&lt;/head&gt;</code> 之前，引用下方 JS 和 CSS</p>
+    <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;//goooooooogle.github.io/kaneshiro/src/kaneshiro-v1.css&quot;&gt;&lt;/link&gt;
+&lt;script src=&quot;//goooooooogle.github.io/kaneshiro/src/kaneshiro-v1-min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function(){
+      $.kaneshiro();
+  });
+&lt;/script&gt;</pre>
   </div>
   <hr>
   <div class="col_12">
@@ -285,7 +287,7 @@
     <div class="fb-comments" data-href="http://goooooooogle.github.io/kaneshiro/" data-numposts="5" data-colorscheme="light"></div>
   </div>
 </div>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="src/kaneshiro-v1.js" type="text/javascript"></script>
 <script src="hc-sticky.js" type="text/javascript"></script>
 <script>
